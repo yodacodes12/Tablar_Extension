@@ -1,0 +1,8 @@
+.output
+.output-e2e
+.wxt
+node_modules
+test-results
+.venv-e2e
+package-lock.json
+*.md

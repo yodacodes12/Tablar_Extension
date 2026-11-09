@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens. Semantic colours switch with the theme; components only use these. */
+@theme {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --color-bg: var(--t-bg);
+  --color-surface: var(--t-surface);
+  --color-raised: var(--t-raised);
+  --color-line: var(--t-line);
+  --color-fg: var(--t-fg);
+  --color-muted: var(--t-muted);
+  --color-faint: var(--t-faint);
+  --color-accent: var(--t-accent);
+  --color-accent-fg: var(--t-accent-fg);
+  --color-accent-soft: var(--t-accent-soft);
+  --color-warn: var(--t-warn);
+  --color-warn-soft: var(--t-warn-soft);
+  --color-danger: var(--t-danger);
+  --color-danger-soft: var(--t-danger-soft);
+  --color-info: var(--t-info);
+  --color-info-soft: var(--t-info-soft);
+}
+
+:root {
+  --t-bg: #f6f7f9;
+  --t-surface: #ffffff;
+  --t-raised: #f1f3f6;
+  --t-line: #e3e6eb;
+  --t-fg: #111827;
+  --t-muted: #4b5563;
+  --t-faint: #6b7280;
+  --t-accent: #0f766e;
+  --t-accent-fg: #ffffff;
+  --t-accent-soft: #ccfbf1;
+  --t-warn: #92400e;
+  --t-warn-soft: #fef3c7;
+  --t-danger: #b91c1c;
+  --t-danger-soft: #fee2e2;
+  --t-info: #1d4ed8;
+  --t-info-soft: #dbeafe;
+  color-scheme: light;
+}
+
+.dark {
+  --t-bg: #0b0f17;
+  --t-surface: #121826;
+  --t-raised: #1a2232;
+  --t-line: #263044;
+  --t-fg: #e8ecf3;
+  --t-muted: #a3adbf;
+  --t-faint: #8590a3;
+  --t-accent: #2dd4bf;
+  --t-accent-fg: #042f2e;
+  --t-accent-soft: #123a37;
+  --t-warn: #fbbf24;
+  --t-warn-soft: #3a2a0c;
+  --t-danger: #f87171;
+  --t-danger-soft: #3b1518;
+  --t-info: #93c5fd;
+  --t-info-soft: #172554;
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--t-bg);
+  color: var(--t-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--t-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

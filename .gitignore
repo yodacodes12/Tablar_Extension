@@ -1,0 +1,13 @@
+node_modules
+.output
+.output-e2e
+.wxt
+web-ext-artifacts
+test-results
+playwright-report
+*.log
+.env*
+.venv-e2e
+
+# Auto-added by Nuvai session-start-governance-check
+.DS_Store
