@@ -100,7 +100,7 @@ To test quickly: Settings → inactivity threshold → 5 minutes, or use the pop
 "Suspend all others" button.
 ```
 
-**License:** choose the license you want before submitting (the repo has none yet).
+**License:** MIT License.
 
 ---
 

@@ -60,3 +60,7 @@ npm run build          # builds .output/{chrome,edge,brave,firefox}-mv3
 - **Chromium gives a discarded tab a new tab ID.** Tablar follows the change. Firefox keeps the ID.
 - **Sleep:** time spent asleep counts as inactivity (it is real elapsed time). After waking, tabs past the threshold are suspended on the next check, and the active tab is never touched.
 - Automatic suspension happens on the next one-minute check after a tab crosses the threshold, not at the exact second.
+
+## License
+
+[MIT](LICENSE) © 2026 yodacodes12
