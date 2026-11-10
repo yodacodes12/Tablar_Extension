@@ -9,6 +9,10 @@ export default defineConfig({
   srcDir: 'src',
   outDir: e2e ? '.output-e2e' : '.output',
   modules: ['@wxt-dev/module-react'],
+  // Source archive for addons.mozilla.org review: only what is needed to rebuild.
+  zip: {
+    excludeSources: ['plan.md', 'test-results/**', 'store/**', '.venv-e2e/**', '.output-e2e/**'],
+  },
   hooks: {
     // The E2E bridge content script only exists in test builds.
     'entrypoints:resolved': (_wxt, entrypoints) => {
